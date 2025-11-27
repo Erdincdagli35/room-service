@@ -8,23 +8,20 @@ public class Room {
     @Id
     private String id;
     private String roomNo;
-    private String name;
     private String description;
 
     // No-arg constructor (Mongo için gerekebilir)
     public Room() {}
 
     // id içeren constructor (DataLoader'da kullandığın şekil için)
-    public Room(String id, String roomNo, String name, String description) {
+    public Room(String id, String roomNo, String description) {
         this.id = id;
         this.roomNo = roomNo;
-        this.name = name;
         this.description = description;
     }
 
     // name-description constructor (istersen bunu kullan)
     public Room(String name, String description) {
-        this.name = name;
         this.description = description;
     }
 
@@ -40,8 +37,6 @@ public class Room {
         this.roomNo = roomNo;
     }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
 }

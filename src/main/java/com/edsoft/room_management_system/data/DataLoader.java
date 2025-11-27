@@ -33,26 +33,25 @@ public class DataLoader implements CommandLineRunner {
             long count = roomRepository.count();
             if (count == 0) {
                 List<Room> rooms = List.of(
-                        new Room(null, "1", "Sea View Garden Standard", "Sea View Garden Standard"),
-                        // duplicate "1" kaldırıldı — eğer iki aynı roomNumber istiyorsan tekrar ekleyebilirsin
-                        new Room(null, "2", "Sea View Garden Suit", "Sea View Garden Suit"),
-                        new Room(null, "3", "Sea View Garden Suit", "Sea View Garden Suit"),
-                        new Room(null, "4", "Sea View Suit", "Sea View Suit"),
-                        new Room(null, "5", "Sea View Standard", "Sea View Standard"),
-                        new Room(null, "6", "Sea View Standard", "Sea View Standard"),
-                        new Room(null, "7", "Sea View Jacuzzi Suit", "Sea View Jacuzzi Suit"),
-                        new Room(null, "8", "Sea View Suit", "Sea View Suit"),
-                        new Room(null, "9", "Sea View Roof Suit", "Sea View Roof Suit"),
-                        new Room(null, "10", "Sea View Roof Standard", "Sea View Roof Standard"),
-                        new Room(null, "11", "Sea View Roof Standard", "Sea View Roof Standard"),
-                        new Room(null, "12", "Sea View Roof Jacuzzi Suit", "Sea View Roof Jacuzzi Suit"),
-                        new Room(null, "13", "Sea View Roof Suit", "Sea View Roof Suit"),
-                        new Room(null, "Loft 1", "Loft Suit", "Loft Suit"),
-                        new Room(null, "Loft 2", "Loft Suit", "Loft Suit"),
-                        new Room(null, "Loft 3", "Loft Suit", "Loft Suit"),
-                        new Room(null, "Loft 4", "Loft Suit", "Loft Suit"),
-                        new Room(null, "Loft 5", "Loft Suit", "Loft Suit"),
-                        new Room(null, "Loft 6", "Loft Suit", "Loft Suit")
+                        new Room(null, "1", "Sea View Garden Standard"),
+                        new Room(null, "2", "Sea View Garden Suit"),
+                        new Room(null, "3", "Sea View Garden Suit"),
+                        new Room(null, "4", "Sea View Suit"),
+                        new Room(null, "5", "Sea View Standard"),
+                        new Room(null, "6", "Sea View Standard"),
+                        new Room(null, "7", "Sea View Jacuzzi Suit"),
+                        new Room(null, "8", "Sea View Suit"),
+                        new Room(null, "9", "Sea View Roof Suit"),
+                        new Room(null, "10", "Sea View Roof Standard"),
+                        new Room(null, "11", "Sea View Roof Standard"),
+                        new Room(null, "12", "Sea View Roof Jacuzzi Suit"),
+                        new Room(null, "13", "Sea View Roof Suit"),
+                        new Room(null, "Loft 1", "Loft Suit"),
+                        new Room(null, "Loft 2", "Loft Suit"),
+                        new Room(null, "Loft 3", "Loft Suit"),
+                        new Room(null, "Loft 4", "Loft Suit"),
+                        new Room(null, "Loft 5", "Loft Suit"),
+                        new Room(null, "Loft 6", "Loft Suit")
                 );
 
                 List<Room> saved = roomRepository.saveAll(rooms);
