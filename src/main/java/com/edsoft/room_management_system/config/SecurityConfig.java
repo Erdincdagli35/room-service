@@ -17,22 +17,28 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable())
-                // burada bean'i kullanıyoruz, applyPermitDefaultValues kullanmayacağız
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
+
         return http.build();
     }
 
     @Bean
-    CorsConfigurationSource corsConfigurationSource() {
+    public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("https://beachorder.up.railway.app", "http://localhost:4200"));
+
+        config.setAllowedOrigins(List.of(
+                "https://beachorder.up.railway.app",
+                "http://localhost:4200"
+        ));
+
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        config.setAllowedHeaders(List.of("Authorization", "Content-Type", "X-Requested-With", "Accept"));
-        config.setAllowCredentials(true);
+        config.setAllowedHeaders(List.of("*")); // Tüm header’ları izin ver
+        config.setAllowCredentials(true);       // withCredentials varsa izin ver
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", config);
+        source.registerCorsConfiguration("/**", config); // Tüm endpointler için geçerli
+
         return source;
     }
 }
