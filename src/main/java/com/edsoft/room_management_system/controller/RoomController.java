@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/rooms")
-@CrossOrigin({"https://roomservice.up.railway.app", "http://localhost:8088"})
+@CrossOrigin({"https://roomservice.up.railway.app", "http://localhost:8080"})
 public class RoomController {
 
     private final RoomService roomService;
