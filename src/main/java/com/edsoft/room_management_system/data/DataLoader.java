@@ -33,9 +33,9 @@ public class DataLoader implements CommandLineRunner {
             long count = roomRepository.count();
             if (count == 0) {
                 List<Room> rooms = List.of(
-                        new Room("1", "Bahçe 1", "Sea View Garden Standard"),
-                        new Room("2", "Bahçe 2", "Sea View Garden Suit"),
-                        new Room("3", "Bahçe 3", "Sea View Garden Suit"),
+                        new Room("1", "1", "Sea View Garden Standard"),
+                        new Room("2", "2", "Sea View Garden Suit"),
+                        new Room("3", "3", "Sea View Garden Suit"),
                         new Room("4", "4", "Sea View Suit"),
                         new Room("5", "5", "Sea View Standard"),
                         new Room("6", "6", "Sea View Standard"),
