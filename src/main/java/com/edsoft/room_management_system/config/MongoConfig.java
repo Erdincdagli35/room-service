@@ -18,11 +18,11 @@ public class MongoConfig {
         MongoCredential credential = MongoCredential.createScramSha256Credential(
                 "mongo",
                 "admin",
-                "RPLJLnAymTucCUYlkIDJQRnqJZTBDyOB".toCharArray()
+                "iMGWFAdkZmSPlhRQKFJrOHJdCYcaZfkj".toCharArray()
         );
 
         MongoClientSettings settings = MongoClientSettings.builder()
-                .applyConnectionString(new ConnectionString("mongodb://centerbeam.proxy.rlwy.net:45411"))
+                .applyConnectionString(new ConnectionString("mongodb://centerbeam.proxy.rlwy.net:37110"))
                 .credential(credential)
                 .build();
 
